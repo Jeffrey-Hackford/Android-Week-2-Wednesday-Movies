@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.epicodus.mymovies.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:background="#000000"
+        android:src="@drawable/reel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleEditText"
+        android:hint="Search by Title"
+        android:textColorHint="@color/abc_secondary_text_material_dark"
+        android:textColor="#eaeaea"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textIsSelectable="false"
+        android:textStyle="bold"
+        android:background="@color/accent_material_dark"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_above="@+id/titleSearchButton"
+        android:layout_alignRight="@+id/releaseDateEditText"
+        android:layout_alignEnd="@+id/releaseDateEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/releaseDateEditText"
+        android:layout_centerVertical="true"
+        android:hint="Search by Release Date"
+        android:textColorHint="@color/abc_secondary_text_material_dark"
+        android:textColor="#eaeaea"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="@color/accent_material_dark"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingEditText"
+        android:layout_marginTop="27dp"
+        android:textColorHint="@color/abc_secondary_text_material_dark"
+        android:hint="Search by Rating"
+        android:textSize="15sp"
+        android:textColor="#eaeaea"
+        android:textStyle="bold"
+        android:background="@color/accent_material_dark"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/releaseDateSearchButton"
+        android:layout_alignRight="@+id/releaseDateEditText"
+        android:layout_alignEnd="@+id/releaseDateEditText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/titleSearchButton"
+        android:layout_marginBottom="50dp"
+        android:layout_above="@+id/releaseDateEditText"
+        android:layout_alignRight="@+id/releaseDateEditText"
+        android:layout_alignEnd="@+id/releaseDateEditText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/releaseDateSearchButton"
+        android:layout_below="@+id/releaseDateEditText"
+        android:layout_alignRight="@+id/releaseDateEditText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/ratingSearchButton"
+        android:layout_below="@+id/ratingEditText"
+        android:layout_alignRight="@+id/ratingEditText"
+        android:layout_alignEnd="@+id/ratingEditText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Search"
+        android:id="@+id/mainTitleTextView"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/accent_material_dark"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textAlignment="center" />
+
+</RelativeLayout>
