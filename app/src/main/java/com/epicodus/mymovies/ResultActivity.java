@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -18,6 +21,8 @@ public class ResultActivity extends AppCompatActivity {
 
     public Movie mMovie = new Movie();
     @Bind(R.id.movieTitleTextView) TextView mMovieTitle;
+    @Bind(R.id.posterImageView)
+    ImageView mPosterImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +59,10 @@ public class ResultActivity extends AppCompatActivity {
                 ResultActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        Log.d("photo url", "http://image.tmdb.org/t/p/w500" + mMovie.getPoster());
+                        Picasso.with(ResultActivity.this)
+                                .load("http://image.tmdb.org/t/p/w500" + mMovie.getPoster()).into(mPosterImageView);
+
                         mMovieTitle.setText(mMovie.getSynopsis());
                     }
                 });
