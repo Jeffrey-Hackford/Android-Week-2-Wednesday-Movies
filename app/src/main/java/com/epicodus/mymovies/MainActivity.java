@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v){
         if(v == mTitleSearchButton){
-
             String title = mTitleEditText.getText().toString();
             Intent titleIntent = new Intent(MainActivity.this, ResultActivity.class);
             titleIntent.putExtra("title", title);
