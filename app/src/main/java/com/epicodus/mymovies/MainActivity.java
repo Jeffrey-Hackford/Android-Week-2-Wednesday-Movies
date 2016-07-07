@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.titleEditText) EditText mTitleEditText;
     @Bind(R.id.titleSearchButton) Button mTitleSearchButton;
     @Bind(R.id.ratingSearchButton) Button mRatingSearchButton;
-    @Bind(R.id.releaseDateSearchButton) Button mReleaseDateSearchButton;
 
     String setRating;
 
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mMainTitleTextView.setTypeface(ritaglio);
 
         mTitleSearchButton.setOnClickListener(this);
-        mReleaseDateSearchButton.setOnClickListener(this);
+
         mRatingSearchButton.setOnClickListener(this);
 
     }
@@ -46,8 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent titleIntent = new Intent(MainActivity.this, ResultActivity.class);
             titleIntent.putExtra("title", title);
             startActivity(titleIntent);
-
-        } else if (v == mReleaseDateSearchButton){
 
         } else if (v == mRatingSearchButton){
             Intent ratingIntent = new Intent(MainActivity.this, RatingActivity.class);

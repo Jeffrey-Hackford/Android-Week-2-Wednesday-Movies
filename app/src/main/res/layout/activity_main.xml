@@ -30,10 +30,8 @@
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:layout_below="@+id/mainTitleTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="33dp"
-        android:layout_marginEnd="33dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -41,26 +39,16 @@
         android:text="Submit"
         android:id="@+id/titleSearchButton"
         android:layout_below="@+id/titleEditText"
-        android:layout_alignRight="@+id/titleEditText"
-        android:layout_alignEnd="@+id/titleEditText" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:id="@+id/releaseDateSearchButton"
-        android:layout_above="@+id/radioButton"
-        android:layout_alignLeft="@+id/titleSearchButton"
-        android:layout_alignStart="@+id/titleSearchButton" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search By Rating"
         android:id="@+id/ratingSearchButton"
+        android:layout_marginBottom="92dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -79,10 +67,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/accent_material_dark"
+        android:id="@+id/radioGroup"
         android:layout_above="@+id/ratingSearchButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/accent_material_dark">
+        android:layout_alignRight="@+id/titleSearchButton"
+        android:layout_alignEnd="@+id/titleSearchButton">
 
         <RadioButton
             android:layout_width="wrap_content"

@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 
-import com.epicodus.mymovies.adapters.MovieListAdapter;
+import com.epicodus.mymovies.MovieListAdapter;
 
 import java.io.IOException;
 import java.util.ArrayList;

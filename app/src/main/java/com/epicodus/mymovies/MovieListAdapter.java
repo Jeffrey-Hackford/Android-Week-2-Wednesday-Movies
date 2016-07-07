@@ -1,4 +1,4 @@
-package com.epicodus.mymovies.MovieListAdapter;
+package com.epicodus.mymovies;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

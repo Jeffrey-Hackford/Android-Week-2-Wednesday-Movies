@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.epicodus.mymovies.ResultActivity">
+    tools:context="com.epicodus.mymovies.ResultActivity"
+    android:background="#000000">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
         android:id="@+id/posterImageView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/movieSynopsisTextView"
+        android:paddingBottom="10dp" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -22,6 +24,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="6dp"
+        android:paddingBottom="20dp" />
 
 </RelativeLayout>
