@@ -29,83 +29,98 @@
         android:paddingBottom="5dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:layout_above="@+id/titleSearchButton"
-        android:layout_alignRight="@+id/releaseDateEditText"
-        android:layout_alignEnd="@+id/releaseDateEditText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/releaseDateEditText"
-        android:layout_centerVertical="true"
-        android:hint="Search by Release Date"
-        android:textColorHint="@color/abc_secondary_text_material_dark"
-        android:textColor="#eaeaea"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:background="@color/accent_material_dark"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ratingEditText"
-        android:layout_marginTop="27dp"
-        android:textColorHint="@color/abc_secondary_text_material_dark"
-        android:hint="Search by Rating"
-        android:textSize="15sp"
-        android:textColor="#eaeaea"
-        android:textStyle="bold"
-        android:background="@color/accent_material_dark"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingRight="5dp"
-        android:paddingLeft="5dp"
-        android:layout_below="@+id/releaseDateSearchButton"
-        android:layout_alignRight="@+id/releaseDateEditText"
-        android:layout_alignEnd="@+id/releaseDateEditText" />
+        android:layout_below="@+id/mainTitleTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="33dp"
+        android:layout_marginEnd="33dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/titleSearchButton"
-        android:layout_marginBottom="50dp"
-        android:layout_above="@+id/releaseDateEditText"
-        android:layout_alignRight="@+id/releaseDateEditText"
-        android:layout_alignEnd="@+id/releaseDateEditText" />
+        android:layout_below="@+id/titleEditText"
+        android:layout_alignRight="@+id/titleEditText"
+        android:layout_alignEnd="@+id/titleEditText" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/releaseDateSearchButton"
-        android:layout_below="@+id/releaseDateEditText"
-        android:layout_alignRight="@+id/releaseDateEditText" />
+        android:layout_above="@+id/radioButton"
+        android:layout_alignLeft="@+id/titleSearchButton"
+        android:layout_alignStart="@+id/titleSearchButton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Search By Rating"
         android:id="@+id/ratingSearchButton"
-        android:layout_below="@+id/ratingEditText"
-        android:layout_alignRight="@+id/ratingEditText"
-        android:layout_alignEnd="@+id/ratingEditText" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Movie Search"
         android:id="@+id/mainTitleTextView"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_centerHorizontal="true"
         android:textColor="@color/accent_material_dark"
         android:textStyle="bold"
         android:textSize="50sp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/ratingSearchButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/accent_material_dark">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/accent_material_dark"
+            android:text="G"
+            android:id="@+id/gRadio"
+            android:padding="8sp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/accent_material_dark"
+            android:text="PG"
+            android:id="@+id/pgRadio"
+            android:padding="8sp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/accent_material_dark"
+            android:text="PG-13"
+            android:id="@+id/pg13Radio"
+            android:padding="8sp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R"
+            android:id="@+id/rRadio"
+            android:background="@color/accent_material_dark"
+            android:padding="8sp"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
 
 </RelativeLayout>

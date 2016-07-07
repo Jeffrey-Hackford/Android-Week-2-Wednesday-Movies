@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import butterknife.Bind;
@@ -16,11 +17,11 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     @Bind(R.id.mainTitleTextView) TextView mMainTitleTextView;
     @Bind(R.id.titleEditText) EditText mTitleEditText;
-    @Bind(R.id.ratingEditText) EditText mRatingEditText;
-    @Bind(R.id.releaseDateEditText) EditText mReleaseDateEditText;
     @Bind(R.id.titleSearchButton) Button mTitleSearchButton;
     @Bind(R.id.ratingSearchButton) Button mRatingSearchButton;
     @Bind(R.id.releaseDateSearchButton) Button mReleaseDateSearchButton;
+
+    String setRating;
 
 
     @Override
@@ -48,18 +49,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         } else if (v == mReleaseDateSearchButton){
 
-            String releaseDate = mReleaseDateEditText.getText().toString();
-            Intent releaseDateIntent = new Intent(MainActivity.this, ResultActivity.class);
-            releaseDateIntent.putExtra("releaseDate", releaseDate);
-            startActivity(releaseDateIntent);
-
         } else if (v == mRatingSearchButton){
-
-            String rating = mRatingEditText.getText().toString();
-            Intent ratingIntent = new Intent(MainActivity.this, ResultActivity.class);
-            ratingIntent.putExtra("rating", rating);
+            Intent ratingIntent = new Intent(MainActivity.this, RatingActivity.class);
+            ratingIntent.putExtra("rating", setRating);
             startActivity(ratingIntent);
+        }
+    }
 
+    public void onRadioButtonClicked(View view){
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch(view.getId()){
+            case R.id.rRadio:
+                if (checked)
+                   setRating = "r";
+                break;
+            case R.id.pg13Radio:
+                if (checked)
+                    setRating = "pg13";
+                break;
+            case R.id.pgRadio:
+                if (checked)
+                    setRating = "pg";
+                break;
+            case R.id.gRadio:
+                if (checked)
+                    setRating = "g";
+                break;
         }
     }
 }

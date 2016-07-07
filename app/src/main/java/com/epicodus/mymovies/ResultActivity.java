@@ -20,7 +20,7 @@ import okhttp3.Response;
 public class ResultActivity extends AppCompatActivity {
 
     public Movie mMovie = new Movie();
-    @Bind(R.id.movieTitleTextView) TextView mMovieTitle;
+    @Bind(R.id.movieSynopsisTextView) TextView mMovieSynopsis;
     @Bind(R.id.posterImageView)
     ImageView mPosterImageView;
 
@@ -31,19 +31,8 @@ public class ResultActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        if (intent.getStringExtra("title") != null) {
             String title = intent.getStringExtra("title");
-            Log.d("title", title);
             getMovie(title);
-        } else if (intent.getStringExtra("releaseDate") != null) {
-            String releaseDate = intent.getStringExtra("releaseDate");
-            Log.d("release date", releaseDate);
-            getMovie(releaseDate);
-        } else if (intent.getStringExtra("rating") != null) {
-            String rating = intent.getStringExtra("rating");
-            Log.d("rating", rating);
-            getMovie(rating);
-        }
     }
 
     public void getMovie(String title){
@@ -59,11 +48,10 @@ public class ResultActivity extends AppCompatActivity {
                 ResultActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Log.d("photo url", "http://image.tmdb.org/t/p/w500" + mMovie.getPoster());
                         Picasso.with(ResultActivity.this)
                                 .load("http://image.tmdb.org/t/p/w500" + mMovie.getPoster()).into(mPosterImageView);
 
-                        mMovieTitle.setText(mMovie.getSynopsis());
+                        mMovieSynopsis.setText(mMovie.getSynopsis());
                     }
                 });
             }

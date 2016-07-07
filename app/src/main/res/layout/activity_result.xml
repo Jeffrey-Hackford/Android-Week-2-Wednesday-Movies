@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/movieTitleTextView"
+        android:id="@+id/movieSynopsisTextView"
         android:textAlignment="center"
         android:textColor="#eaeaea"
         android:textStyle="bold"

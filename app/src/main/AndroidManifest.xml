@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ResultActivity" />
+        <activity android:name=".RatingActivity" />
 
         <service
             android:name=".MovieService"
