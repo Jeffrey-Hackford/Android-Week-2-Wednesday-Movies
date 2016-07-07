@@ -21,8 +21,8 @@ public class ResultActivity extends AppCompatActivity {
 
     public Movie mMovie = new Movie();
     @Bind(R.id.movieSynopsisTextView) TextView mMovieSynopsis;
-    @Bind(R.id.posterImageView)
-    ImageView mPosterImageView;
+    @Bind(R.id.posterImageView) ImageView mPosterImageView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

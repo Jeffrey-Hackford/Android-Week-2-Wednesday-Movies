@@ -62,19 +62,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(view.getId()){
             case R.id.rRadio:
                 if (checked)
-                   setRating = "r";
+                   setRating = "R";
                 break;
             case R.id.pg13Radio:
                 if (checked)
-                    setRating = "pg13";
+                    setRating = "PG-13";
                 break;
             case R.id.pgRadio:
                 if (checked)
-                    setRating = "pg";
+                    setRating = "PG";
                 break;
             case R.id.gRadio:
                 if (checked)
-                    setRating = "g";
+                    setRating = "G";
                 break;
         }
     }

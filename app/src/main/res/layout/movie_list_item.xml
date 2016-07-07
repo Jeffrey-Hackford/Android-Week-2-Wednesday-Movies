@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:id="@+id/posterThumb"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eaeaea"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/movieTitle"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Test Title"
+            android:paddingBottom="10dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="07-07 14:03:08.379 1380-1380/com.epicodus.mymovies W/ViewRootImpl: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=207.11426, y[0]=2328.8281, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=14961452, downTime=14947931, deviceId=0, source=0x1002 }"
+            android:id="@+id/movieSynopsis"
+            android:layout_below="@+id/movieTitle"/>
+
+    </LinearLayout>
+</LinearLayout>
